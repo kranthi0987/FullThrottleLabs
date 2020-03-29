@@ -1,9 +1,15 @@
+#  Copyright (c) 2020.  This repo or code maintained  by Sanjay kranthi
+#  you can contact on this mail: kranthi0987@gmail.com
+#  you can clone my projects git: github.com/kranthi0987
+
 from rest_framework import serializers
 
 from apps.testData.models import UserModelData, ActivityPeriodModels
 
 
 class UserDataModelSerialzier(serializers.ModelSerializer):
+    """User Data model Serizlizer is used to conver the object into json vice versa"""
+
     class Meta:
         model = UserModelData
         fields = '__all__'
@@ -16,7 +22,7 @@ class UserDataModelSerialzier(serializers.ModelSerializer):
         activtymodel = ActivityPeriodModels.objects.filter(user_id=id)
         activity_periods_array = []
         activity_periods_total = {'activity_periods': activity_periods_array}
-        print(activtymodel.count())
+        # print(activtymodel.count())
         for modells in activtymodel:
             if modells is None:
                 activity_periods = {"start_time": "no",

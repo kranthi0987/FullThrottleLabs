@@ -7,6 +7,10 @@ For more information on this file, see
 https://docs.djangoproject.com/en/3.0/howto/deployment/wsgi/
 """
 
+#  Copyright (c) 2020.  This repo or code maintained  by Sanjay kranthi
+#  you can contact on this mail: kranthi0987@gmail.com
+#  you can clone my projects git: github.com/kranthi0987
+
 import os
 
 from django.core.wsgi import get_wsgi_application
